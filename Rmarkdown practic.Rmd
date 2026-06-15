@@ -1,0 +1,56 @@
+---
+title: "Rmarkdown"
+author: "Kelly"
+date: "2026-06-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
+library(knitr)
+
+```
+# introduction
+we can add some context like hello everyone. this is an R markdown.
+we can do *italics* and **bold** and a [link] (https://www.youtube.com/watch?v=asHhuHRxhvo).
+# R code
+```{r,eval=FALSE}
+values<-rnorm(5)
+values
+```
+
+We can also use echo to show or not show the code and results to show or not show the output.eval is the code for show the results or not. we can also use the C to insert code. we can also click the gear where we can set the requirement. at the end of this window, click the yellow R you can aslo pick which part of the R code you would like to go.
+
+# more text tools
+
+## subheadings
+ unordered lists:
+ 
+ - first item
+ 
+ - second item
+ 
+ ordered lists:
+ 
+ 1. first
+ 
+ 2. second
+ 
+ we can insert an image like this: ![alt text](YangYang copy.png){width="20%"}
+ 
+ we can add citations^[footnotes]
+ 
+ we can use math mode $\alpha \beta$ and so on
+ 
+ Finally, we can make nice tables.
+```{r}
+penguins_sm<-head(penguins)
+kable(penguins_sm)
+```
+ 
+ 
+ 
+ 
+ 
